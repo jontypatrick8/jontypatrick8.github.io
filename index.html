@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Jonty Patrick — Graphic Designer</title>
 
 <style>
@@ -16,8 +17,13 @@
   --line:#ddd3ca;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
@@ -26,13 +32,18 @@ body{
   font-family:'DM Sans',sans-serif;
 }
 
-a{color:inherit;text-decoration:none}
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
 .wrap{
   max-width:1180px;
   margin:auto;
   padding:0 28px;
 }
+
+/* NAVIGATION */
 
 nav{
   display:flex;
@@ -41,9 +52,9 @@ nav{
   padding:26px 0;
   position:sticky;
   top:0;
-  background:rgba(246,239,232,.92);
+  background:rgba(246,239,232,.95);
   backdrop-filter:blur(10px);
-  z-index:5;
+  z-index:10;
 }
 
 .logo{
@@ -52,7 +63,9 @@ nav{
   font-size:23px;
 }
 
-.logo span{color:var(--accent)}
+.logo span{
+  color:var(--accent);
+}
 
 .navlinks{
   display:flex;
@@ -61,7 +74,11 @@ nav{
   font-weight:600;
 }
 
-.navlinks a:hover{color:var(--accent)}
+.navlinks a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
 
 .hero{
   min-height:78vh;
@@ -111,9 +128,15 @@ h1 em{
   font-size:14px;
 }
 
-.cta:hover{background:var(--accent)}
+.cta:hover{
+  background:var(--accent);
+}
 
-section{padding:85px 0}
+/* SECTIONS */
+
+section{
+  padding:85px 0;
+}
 
 .section-head{
   display:flex;
@@ -135,6 +158,8 @@ h2{
   max-width:410px;
   line-height:1.6;
 }
+
+/* FILTERS */
 
 .filters{
   display:flex;
@@ -158,6 +183,8 @@ h2{
   color:white;
   border-color:var(--ink);
 }
+
+/* PORTFOLIO */
 
 .grid{
   display:grid;
@@ -234,6 +261,8 @@ h2{
   font-size:14px;
 }
 
+/* ABOUT */
+
 .about{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -241,7 +270,9 @@ h2{
   border-top:1px solid var(--line);
 }
 
-.about h2{font-size:42px}
+.about h2{
+  font-size:42px;
+}
 
 .about p{
   font-size:18px;
@@ -263,6 +294,8 @@ h2{
   font-size:13px;
   font-weight:600;
 }
+
+/* CONTACT */
 
 .contact{
   background:var(--ink);
@@ -307,6 +340,8 @@ h2{
   color:#fff;
 }
 
+/* FOOTER */
+
 footer{
   display:flex;
   justify-content:space-between;
@@ -316,18 +351,22 @@ footer{
   border-top:1px solid var(--line);
 }
 
+/* LIGHTBOX */
+
 #lightbox{
   display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.88);
-  z-index:20;
+  background:rgba(0,0,0,.90);
+  z-index:100;
   padding:25px;
   align-items:center;
   justify-content:center;
 }
 
-#lightbox.open{display:flex}
+#lightbox.open{
+  display:flex;
+}
 
 #lightbox img{
   max-width:92vw;
@@ -346,39 +385,66 @@ footer{
   cursor:pointer;
 }
 
+/* MOBILE */
+
 @media(max-width:800px){
-  .navlinks{display:none}
+
+  .navlinks{
+    display:none;
+  }
+
   .hero{
     min-height:68vh;
     padding-top:35px;
   }
+
   .grid{
     grid-template-columns:1fr 1fr;
   }
+
   .card{
     grid-column:span 1;
   }
+
   .card:nth-child(3n+2){
     margin-top:0;
   }
+
   .about{
     grid-template-columns:1fr;
     gap:20px;
   }
+
   .section-head{
     display:block;
   }
+
   .section-head p{
     margin-top:15px;
   }
 }
 
 @media(max-width:520px){
-  .wrap{padding:0 18px}
-  section{padding:60px 0}
-  .grid{display:block}
-  .card{margin-bottom:30px!important}
-  .contact{padding:35px 25px}
+
+  .wrap{
+    padding:0 18px;
+  }
+
+  section{
+    padding:60px 0;
+  }
+
+  .grid{
+    display:block;
+  }
+
+  .card{
+    margin-bottom:30px !important;
+  }
+
+  .contact{
+    padding:35px 25px;
+  }
 }
 </style>
 </head>
@@ -387,19 +453,32 @@ footer{
 
 <div class="wrap">
 
+<!-- NAVIGATION -->
+
 <nav>
-  <a class="logo" href="#">Jonty<span>.</span></a>
+
+  <a class="logo" href="#">
+    Jonty<span>.</span>
+  </a>
 
   <div class="navlinks">
     <a href="#work">Work</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
+
 </nav>
 
+
+<!-- HERO -->
+
 <header class="hero">
+
   <div>
-    <div class="kicker">Graphic Designer · Portfolio</div>
+
+    <div class="kicker">
+      Graphic Designer · Portfolio
+    </div>
 
     <h1>
       Ideas into<br>
@@ -415,17 +494,28 @@ footer{
     <a class="cta" href="#work">
       Explore my work ↓
     </a>
+
   </div>
+
 </header>
 
+
+<!-- PORTFOLIO -->
 
 <section id="work">
 
   <div class="section-head">
 
     <div>
-      <div class="kicker">Selected work</div>
-      <h2>My portfolio</h2>
+
+      <div class="kicker">
+        Selected work
+      </div>
+
+      <h2>
+        My portfolio
+      </h2>
+
     </div>
 
     <p>
@@ -438,302 +528,813 @@ footer{
 
 
   <div class="filters">
-    <button class="filter active" data-filter="all">All</button>
-    <button class="filter" data-filter="logo">Logo</button>
-    <button class="filter" data-filter="packaging">Packaging</button>
-    <button class="filter" data-filter="social">Social Media</button>
-    <button class="filter" data-filter="print">Print</button>
-  </div>
 
-
-  <div class="grid" id="portfolioGrid"></div>
-
-</section>
-
-
-<section id="about" class="about">
-
-  <div>
-    <div class="kicker">About me</div>
-
-    <h2>
-      Design with purpose,
-      not just decoration.
-    </h2>
-  </div>
-
-  <div>
-
-    <p>
-      I'm Jonty, a graphic design fresher building practical experience
-      through branding, packaging, digital creatives and print design.
-      I enjoy turning simple ideas into visuals that are clear,
-      memorable and useful.
-    </p>
-
-    <div class="skills">
-      <span class="skill">Graphic Design</span>
-      <span class="skill">Branding</span>
-      <span class="skill">Packaging</span>
-      <span class="skill">Social Media</span>
-      <span class="skill">Print Design</span>
-      <span class="skill">Canva</span>
-      <span class="skill">Adobe Illustrator</span>
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="contact">
-
-  <div class="contact">
-
-    <div class="kicker">Let's connect</div>
-
-    <h2>
-      Have a project<br>
-      in mind?
-    </h2>
-
-    <p>
-      I'm open to graphic design opportunities, internships and
-      freelance projects. Feel free to reach out by email,
-      WhatsApp, Instagram or LinkedIn.
-    </p>
-
-    <a class="cta" href="mailto:jontypatrick8@gmail.com">
-      Email me ↗
-    </a>
-
-    <a class="cta"
-       href="https://wa.me/917559327682"
-       target="_blank"
-       rel="noopener">
-      WhatsApp ↗
-    </a>
-
-    <div class="socials">
-
-      <a href="https://instagram.com/_jonty_patrick"
-         target="_blank"
-         rel="noopener">
-        Instagram · @_jonty_patrick
-      </a>
-
-      <a href="https://www.linkedin.com/in/jonty-mishra%F0%9F%8E%A8-46b156239"
-         target="_blank"
-         rel="noopener">
-        LinkedIn · Jonty Mishra
-      </a>
-
-      <span>
-        Call · 7559327682 / 9209323159
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-  <span>© 2026 Jonty Patrick</span>
-  <span>Graphic Design Portfolio</span>
-</footer>
-
-</div>
-
-
-<div id="lightbox"
-     onclick="if(event.target===this)closeLightbox()">
-
-  <button class="close"
-          onclick="closeLightbox()">
-    ×
-  </button>
-
-  <img id="lightboxImg" alt="">
-
-</div>
-
-
-<script>
-
-const grid = document.getElementById("portfolioGrid");
-
-const titles = [
-  "Portfolio Project 01",
-  "Logo Design",
-  "Portfolio Project 03",
-  "Portfolio Project 04",
-  "Packaging Design",
-  "Packaging Design",
-  "Packaging Design",
-  "Packaging Design",
-  "Packaging Design",
-  "Portfolio Project 10",
-  "Social Media",
-  "Portfolio Project 12",
-  "Portfolio Project 13",
-  "Portfolio Project 14",
-  "Portfolio Project 15",
-  "Portfolio Project 16",
-  "Brochure Design",
-  "Portfolio Project 18",
-  "Portfolio Project 19",
-  "Banner Design",
-  "Portfolio Project 21",
-  "Portfolio Project 22",
-  "Wedding Invitation",
-  "Portfolio Project 24",
-  "Portfolio Project 25",
-  "Portfolio Project 26",
-  "Stationery Design",
-  "Portfolio Project 28",
-  "Portfolio Project 29",
-  "Business Card",
-  "Food & Menu Design"
-];
-
-const types = [
-  "print",
-  "logo",
-  "print",
-  "print",
-  "packaging",
-  "packaging",
-  "packaging",
-  "packaging",
-  "packaging",
-  "print",
-  "social",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print",
-  "print"
-];
-
-for(let i=1;i<=31;i++){
-
-  const number = String(i).padStart(2,"0");
-
-  const src = "/page-" + number + ".jpg";
-
-  const card = document.createElement("article");
-
-  card.className = "card";
-
-  card.dataset.type = types[i-1];
-
-  card.innerHTML = `
-    <button class="work-btn"
-      onclick="openLightbox('${src}','${titles[i-1]}')">
-
-      <img
-        src="${src}"
-        alt="${titles[i-1]}"
-        loading="lazy">
-
-      <span class="view">
-        View project ↗
-      </span>
-
+    <button class="filter active" data-filter="all">
+      All
     </button>
 
-    <div class="card-copy">
+    <button class="filter" data-filter="logo">
+      Logo
+    </button>
 
-      <span class="eyebrow">
-        ${titles[i-1]}
-      </span>
+    <button class="filter" data-filter="packaging">
+      Packaging
+    </button>
 
-      <p>
-        Portfolio design project
-      </p>
+    <button class="filter" data-filter="social">
+      Social Media
+    </button>
 
-    </div>
-  `;
+    <button class="filter" data-filter="print">
+      Print
+    </button>
 
-  grid.appendChild(card);
-}
-
-
-function openLightbox(src,title){
-
-  document.getElementById("lightboxImg").src = src;
-
-  document.getElementById("lightboxImg").alt = title;
-
-  document.getElementById("lightbox").classList.add("open");
-}
+  </div>
 
 
-function closeLightbox(){
+  <div class="grid">
 
-  document.getElementById("lightbox").classList.remove("open");
-}
+    <!-- 01 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-01.jpg')">
+
+        <img src="page-01.jpg" alt="Portfolio Project 01">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 01
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
 
 
-document.addEventListener("keydown",function(e){
+    <!-- 02 -->
 
-  if(e.key === "Escape"){
-    closeLightbox();
-  }
+    <article class="card logo">
 
-});
+      <button class="work-btn" onclick="openLightbox('page-02.jpg')">
+
+        <img src="page-02.jpg" alt="Logo Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Logo Design
+        </span>
+
+        <p>
+          Branding Project
+        </p>
+
+      </div>
+
+    </article>
 
 
-const filters = document.querySelectorAll(".filter");
+    <!-- 03 -->
 
-filters.forEach(function(btn){
+    <article class="card print">
 
-  btn.addEventListener("click",function(){
+      <button class="work-btn" onclick="openLightbox('page-03.jpg')">
 
-    filters.forEach(function(b){
-      b.classList.remove("active");
-    });
+        <img src="page-03.jpg" alt="Portfolio Project 03">
 
-    btn.classList.add("active");
+        <span class="view">
+          View project ↗
+        </span>
 
-    const filter = btn.dataset.filter;
+      </button>
 
-    document.querySelectorAll(".card").forEach(function(card){
+      <div class="card-copy">
 
-      if(
-        filter === "all" ||
-        card.dataset.type === filter
-      ){
-        card.style.display = "block";
-      }
-      else{
-        card.style.display = "none";
-      }
+        <span class="eyebrow">
+          Portfolio Project 03
+        </span>
 
-    });
+        <p>
+          Graphic Design Project
+        </p>
 
-  });
+      </div>
 
-});
+    </article>
 
-</script>
 
-</body>
-</html>
+    <!-- 04 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-04.jpg')">
+
+        <img src="page-04.jpg" alt="Portfolio Project 04">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 04
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 05 -->
+
+    <article class="card packaging">
+
+      <button class="work-btn" onclick="openLightbox('page-05.jpg')">
+
+        <img src="page-05.jpg" alt="Packaging Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Packaging Design
+        </span>
+
+        <p>
+          Packaging Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 06 -->
+
+    <article class="card packaging">
+
+      <button class="work-btn" onclick="openLightbox('page-06.jpg')">
+
+        <img src="page-06.jpg" alt="Packaging Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Packaging Design
+        </span>
+
+        <p>
+          Packaging Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 07 -->
+
+    <article class="card packaging">
+
+      <button class="work-btn" onclick="openLightbox('page-07.jpg')">
+
+        <img src="page-07.jpg" alt="Packaging Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Packaging Design
+        </span>
+
+        <p>
+          Packaging Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 08 -->
+
+    <article class="card packaging">
+
+      <button class="work-btn" onclick="openLightbox('page-08.jpg')">
+
+        <img src="page-08.jpg" alt="Packaging Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Packaging Design
+        </span>
+
+        <p>
+          Packaging Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 09 -->
+
+    <article class="card packaging">
+
+      <button class="work-btn" onclick="openLightbox('page-09.jpg')">
+
+        <img src="page-09.jpg" alt="Packaging Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Packaging Design
+        </span>
+
+        <p>
+          Packaging Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 10 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-10.jpg')">
+
+        <img src="page-10.jpg" alt="Portfolio Project 10">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 10
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 11 -->
+
+    <article class="card social">
+
+      <button class="work-btn" onclick="openLightbox('page-11.jpg')">
+
+        <img src="page-11.jpg" alt="Social Media Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Social Media
+        </span>
+
+        <p>
+          Social Media Creative
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 12 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-12.jpg')">
+
+        <img src="page-12.jpg" alt="Portfolio Project 12">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 12
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 13 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-13.jpg')">
+
+        <img src="page-13.jpg" alt="Portfolio Project 13">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 13
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 14 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-14.jpg')">
+
+        <img src="page-14.jpg" alt="Portfolio Project 14">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 14
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 15 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-15.jpg')">
+
+        <img src="page-15.jpg" alt="Portfolio Project 15">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 15
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 16 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-16.jpg')">
+
+        <img src="page-16.jpg" alt="Portfolio Project 16">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 16
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 17 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-17.jpg')">
+
+        <img src="page-17.jpg" alt="Brochure Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Brochure Design
+        </span>
+
+        <p>
+          Print Design
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 18 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-18.jpg')">
+
+        <img src="page-18.jpg" alt="Portfolio Project 18">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 18
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 19 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-19.jpg')">
+
+        <img src="page-19.jpg" alt="Portfolio Project 19">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 19
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 20 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-20.jpg')">
+
+        <img src="page-20.jpg" alt="Banner Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Banner Design
+        </span>
+
+        <p>
+          Print Design
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 21 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-21.jpg')">
+
+        <img src="page-21.jpg" alt="Portfolio Project 21">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 21
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 22 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-22.jpg')">
+
+        <img src="page-22.jpg" alt="Portfolio Project 22">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 22
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 23 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-23.jpg')">
+
+        <img src="page-23.jpg" alt="Wedding Invitation">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Wedding Invitation
+        </span>
+
+        <p>
+          Invitation Design
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 24 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-24.jpg')">
+
+        <img src="page-24.jpg" alt="Portfolio Project 24">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 24
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 25 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-25.jpg')">
+
+        <img src="page-25.jpg" alt="Portfolio Project 25">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 25
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 26 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-26.jpg')">
+
+        <img src="page-26.jpg" alt="Portfolio Project 26">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Portfolio Project 26
+        </span>
+
+        <p>
+          Graphic Design Project
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 27 -->
+
+    <article class="card print">
+
+      <button class="work-btn" onclick="openLightbox('page-27.jpg')">
+
+        <img src="page-27.jpg" alt="Stationery Design">
+
+        <span class="view">
+          View project ↗
+        </span>
+
+      </button>
+
+      <div class="card-copy">
+
+        <span class="eyebrow">
+          Stationery Design
+        </span>
+
+        <p>
+          Print Design
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 
