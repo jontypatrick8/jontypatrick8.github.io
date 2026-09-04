@@ -4,58 +4,439 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Jonty Patrick — Graphic Designer</title>
-<meta name="description" content="Jonty Patrick — graphic design portfolio featuring branding, packaging, social media, print and invitation design.">
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-:root{--paper:#f6efe8;--ink:#171717;--accent:#e52b0b;--muted:#6e6964;--line:#ddd3ca}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}
-a{color:inherit;text-decoration:none} .wrap{max-width:1180px;margin:auto;padding:0 28px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;position:sticky;top:0;background:rgba(246,239,232,.92);backdrop-filter:blur(10px);z-index:5}
-.logo{font-family:'Space Grotesk';font-weight:700;letter-spacing:-.04em;font-size:23px} .logo span{color:var(--accent)}
-.navlinks{display:flex;gap:26px;font-size:14px;font-weight:600} .navlinks a:hover{color:var(--accent)}
-.hero{min-height:78vh;display:grid;align-items:center;padding:70px 0 100px}
-.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--accent)}
-h1{font-family:'Space Grotesk';font-size:clamp(62px,10vw,142px);line-height:.86;letter-spacing:-.075em;margin:18px 0 28px;max-width:1000px}
-h1 em{font-style:normal;color:var(--accent)} .hero p{max-width:650px;color:var(--muted);font-size:18px;line-height:1.65}
-.cta{display:inline-flex;gap:10px;align-items:center;margin-top:22px;background:var(--ink);color:white;padding:14px 19px;border-radius:999px;font-weight:700;font-size:14px}
-.cta:hover{background:var(--accent)} section{padding:85px 0} .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
-h2{font-family:'Space Grotesk';font-size:48px;letter-spacing:-.05em;margin:0} .section-head p{color:var(--muted);max-width:410px;line-height:1.6}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px} .filter{border:1px solid var(--line);background:transparent;border-radius:999px;padding:9px 14px;font:600 13px inherit;cursor:pointer} .filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px} .card{grid-column:span 4} .card:nth-child(3n+2){margin-top:42px}
-.work-btn{display:block;width:100%;padding:0;border:0;background:#eee6df;cursor:pointer;position:relative;overflow:hidden;border-radius:3px;aspect-ratio:1/1.08}
-.work-btn img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s} .work-btn:hover img{transform:scale(1.035)}
-.view{position:absolute;left:14px;bottom:14px;background:var(--ink);color:#fff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;opacity:0;transform:translateY(6px);transition:.25s} .work-btn:hover .view{opacity:1;transform:none}
-.eyebrow{display:block;margin-top:14px;font-size:12px;text-transform:uppercase;letter-spacing:.11em;font-weight:700;color:var(--accent)} .card-copy p{margin:7px 0 0;color:var(--muted);font-size:14px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;border-top:1px solid var(--line)} .about h2{font-size:42px} .about p{font-size:18px;line-height:1.7;color:#4f4a46}
-.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px} .skill{border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:13px;font-weight:600}
-.contact{background:var(--ink);color:white;border-radius:4px;padding:60px} .contact h2{font-size:clamp(42px,7vw,80px)} .contact p{color:#c9c4c0;max-width:580px;line-height:1.7} .contact .cta{background:var(--accent);margin-right:8px}.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.socials a,.socials span{border:1px solid #4a4541;border-radius:999px;padding:9px 13px;font-size:12px;color:#ddd8d4}.socials a:hover{border-color:#fff;color:#fff} footer{display:flex;justify-content:space-between;padding:25px 0;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
-#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:20;padding:25px;align-items:center;justify-content:center} #lightbox.open{display:flex}
-#lightbox img{max-width:92vw;max-height:90vh;object-fit:contain} .close{position:fixed;right:25px;top:20px;color:white;border:0;background:transparent;font-size:34px;cursor:pointer}
-@media(max-width:800px){.navlinks{display:none} .hero{min-height:68vh;padding-top:35px} .grid{grid-template-columns:1fr 1fr} .card{grid-column:span 1} .card:nth-child(3n+2){margin-top:0} .about{grid-template-columns:1fr;gap:20px} .section-head{display:block} .section-head p{margin-top:15px}}
-@media(max-width:520px){.wrap{padding:0 18px} section{padding:60px 0} .grid{display:block} .card{margin-bottom:30px!important} .contact{padding:35px 25px}}
+
+:root{
+  --paper:#f6efe8;
+  --ink:#171717;
+  --accent:#e52b0b;
+  --muted:#6e6964;
+  --line:#ddd3ca;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+}
+
+a{color:inherit;text-decoration:none}
+
+.wrap{
+  max-width:1180px;
+  margin:auto;
+  padding:0 28px;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:26px 0;
+  position:sticky;
+  top:0;
+  background:rgba(246,239,232,.92);
+  backdrop-filter:blur(10px);
+  z-index:5;
+}
+
+.logo{
+  font-family:'Space Grotesk';
+  font-weight:700;
+  font-size:23px;
+}
+
+.logo span{color:var(--accent)}
+
+.navlinks{
+  display:flex;
+  gap:26px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.navlinks a:hover{color:var(--accent)}
+
+.hero{
+  min-height:78vh;
+  display:grid;
+  align-items:center;
+  padding:70px 0 100px;
+}
+
+.kicker{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:700;
+  color:var(--accent);
+}
+
+h1{
+  font-family:'Space Grotesk';
+  font-size:clamp(62px,10vw,142px);
+  line-height:.86;
+  letter-spacing:-.075em;
+  margin:18px 0 28px;
+}
+
+h1 em{
+  font-style:normal;
+  color:var(--accent);
+}
+
+.hero p{
+  max-width:650px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.65;
+}
+
+.cta{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  margin-top:22px;
+  background:var(--ink);
+  color:white;
+  padding:14px 19px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:14px;
+}
+
+.cta:hover{background:var(--accent)}
+
+section{padding:85px 0}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+  margin-bottom:34px;
+}
+
+h2{
+  font-family:'Space Grotesk';
+  font-size:48px;
+  letter-spacing:-.05em;
+  margin:0;
+}
+
+.section-head p{
+  color:var(--muted);
+  max-width:410px;
+  line-height:1.6;
+}
+
+.filters{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.filter{
+  border:1px solid var(--line);
+  background:transparent;
+  border-radius:999px;
+  padding:9px 14px;
+  font:600 13px inherit;
+  cursor:pointer;
+}
+
+.filter.active,
+.filter:hover{
+  background:var(--ink);
+  color:white;
+  border-color:var(--ink);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:20px;
+}
+
+.card{
+  grid-column:span 4;
+}
+
+.card:nth-child(3n+2){
+  margin-top:42px;
+}
+
+.work-btn{
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  background:#eee6df;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  border-radius:3px;
+  aspect-ratio:1/1.08;
+}
+
+.work-btn img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s;
+}
+
+.work-btn:hover img{
+  transform:scale(1.035);
+}
+
+.view{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  background:var(--ink);
+  color:#fff;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:700;
+  opacity:0;
+  transform:translateY(6px);
+  transition:.25s;
+}
+
+.work-btn:hover .view{
+  opacity:1;
+  transform:none;
+}
+
+.eyebrow{
+  display:block;
+  margin-top:14px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.11em;
+  font-weight:700;
+  color:var(--accent);
+}
+
+.card-copy p{
+  margin:7px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  border-top:1px solid var(--line);
+}
+
+.about h2{font-size:42px}
+
+.about p{
+  font-size:18px;
+  line-height:1.7;
+  color:#4f4a46;
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:25px;
+}
+
+.skill{
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:9px 13px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.contact{
+  background:var(--ink);
+  color:white;
+  border-radius:4px;
+  padding:60px;
+}
+
+.contact h2{
+  font-size:clamp(42px,7vw,80px);
+}
+
+.contact p{
+  color:#c9c4c0;
+  max-width:580px;
+  line-height:1.7;
+}
+
+.contact .cta{
+  background:var(--accent);
+  margin-right:8px;
+}
+
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
+
+.socials a,
+.socials span{
+  border:1px solid #4a4541;
+  border-radius:999px;
+  padding:9px 13px;
+  font-size:12px;
+  color:#ddd8d4;
+}
+
+.socials a:hover{
+  border-color:#fff;
+  color:#fff;
+}
+
+footer{
+  display:flex;
+  justify-content:space-between;
+  padding:25px 0;
+  color:var(--muted);
+  font-size:12px;
+  border-top:1px solid var(--line);
+}
+
+#lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.88);
+  z-index:20;
+  padding:25px;
+  align-items:center;
+  justify-content:center;
+}
+
+#lightbox.open{display:flex}
+
+#lightbox img{
+  max-width:92vw;
+  max-height:90vh;
+  object-fit:contain;
+}
+
+.close{
+  position:fixed;
+  right:25px;
+  top:20px;
+  color:white;
+  border:0;
+  background:transparent;
+  font-size:34px;
+  cursor:pointer;
+}
+
+@media(max-width:800px){
+  .navlinks{display:none}
+  .hero{
+    min-height:68vh;
+    padding-top:35px;
+  }
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+  .card{
+    grid-column:span 1;
+  }
+  .card:nth-child(3n+2){
+    margin-top:0;
+  }
+  .about{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .section-head{
+    display:block;
+  }
+  .section-head p{
+    margin-top:15px;
+  }
+}
+
+@media(max-width:520px){
+  .wrap{padding:0 18px}
+  section{padding:60px 0}
+  .grid{display:block}
+  .card{margin-bottom:30px!important}
+  .contact{padding:35px 25px}
+}
 </style>
 </head>
+
 <body>
+
 <div class="wrap">
+
 <nav>
   <a class="logo" href="#">Jonty<span>.</span></a>
-  <div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+
+  <div class="navlinks">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <header class="hero">
   <div>
     <div class="kicker">Graphic Designer · Portfolio</div>
-    <h1>Ideas into<br><em>visuals.</em></h1>
-    <p>Hi, I'm Jonty Patrick — a creative designer focused on clean, engaging visual communication across branding, packaging, social media and print.</p>
-    <a class="cta" href="#work">Explore my work ↓</a>
+
+    <h1>
+      Ideas into<br>
+      <em>visuals.</em>
+    </h1>
+
+    <p>
+      Hi, I'm Jonty Patrick — a creative designer focused on clean,
+      engaging visual communication across branding, packaging,
+      social media and print.
+    </p>
+
+    <a class="cta" href="#work">
+      Explore my work ↓
+    </a>
   </div>
 </header>
 
+
 <section id="work">
+
   <div class="section-head">
-    <div><div class="kicker">Selected work</div><h2>My portfolio</h2></div>
-    <p>A selection of design work from my portfolio, including logos, packaging, social media creatives, brochures, invitations and print materials.</p>
+
+    <div>
+      <div class="kicker">Selected work</div>
+      <h2>My portfolio</h2>
+    </div>
+
+    <p>
+      A selection of design work from my portfolio, including logos,
+      packaging, social media creatives, brochures, invitations
+      and print materials.
+    </p>
+
   </div>
+
+
   <div class="filters">
     <button class="filter active" data-filter="all">All</button>
     <button class="filter" data-filter="logo">Logo</button>
@@ -63,197 +444,296 @@ h2{font-family:'Space Grotesk';font-size:48px;letter-spacing:-.05em;margin:0} .s
     <button class="filter" data-filter="social">Social Media</button>
     <button class="filter" data-filter="print">Print</button>
   </div>
-  <div class="grid">
-      <article class="card" data-type="logo">
-        <button class="work-btn" onclick="openLightbox('page-02.jpg','Logo Design')">
-          <img src="page-02.jpg" alt="Logo Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Logo Design</span>
-          <p>Brand identity &amp; logo exploration</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="packaging">
-        <button class="work-btn" onclick="openLightbox('page-05.jpg','Packaging Design')">
-          <img src="page-05.jpg" alt="Packaging Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Packaging Design</span>
-          <p>Product packaging and label layouts</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="packaging">
-        <button class="work-btn" onclick="openLightbox('page-06.jpg','Packaging Design')">
-          <img src="page-06.jpg" alt="Packaging Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Packaging Design</span>
-          <p>Product packaging and label layouts</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="packaging">
-        <button class="work-btn" onclick="openLightbox('page-07.jpg','Packaging Design')">
-          <img src="page-07.jpg" alt="Packaging Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Packaging Design</span>
-          <p>Product packaging and label layouts</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="packaging">
-        <button class="work-btn" onclick="openLightbox('page-08.jpg','Packaging Design')">
-          <img src="page-08.jpg" alt="Packaging Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Packaging Design</span>
-          <p>Product packaging and label layouts</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="packaging">
-        <button class="work-btn" onclick="openLightbox('page-09.jpg','Packaging Design')">
-          <img src="page-09.jpg" alt="Packaging Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Packaging Design</span>
-          <p>Product packaging and label layouts</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="social">
-        <button class="work-btn" onclick="openLightbox('page-11.jpg','Social Media')">
-          <img src="page-11.jpg" alt="Social Media">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Social Media</span>
-          <p>Social media creative direction</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="brochure">
-        <button class="work-btn" onclick="openLightbox('page-17.jpg','Brochure Design')">
-          <img src="page-17.jpg" alt="Brochure Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Brochure Design</span>
-          <p>Informational brochure layout</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="banner">
-        <button class="work-btn" onclick="openLightbox('page-20.jpg','Banner Design')">
-          <img src="page-20.jpg" alt="Banner Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Banner Design</span>
-          <p>Promotional banner composition</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="invitation">
-        <button class="work-btn" onclick="openLightbox('page-23.jpg','Wedding Invitation')">
-          <img src="page-23.jpg" alt="Wedding Invitation">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Wedding Invitation</span>
-          <p>Invitation design and typography</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="stationery">
-        <button class="work-btn" onclick="openLightbox('page-27.jpg','Stationery Design')">
-          <img src="page-27.jpg" alt="Stationery Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Stationery Design</span>
-          <p>Business stationery system</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="card">
-        <button class="work-btn" onclick="openLightbox('page-30.jpg','Business Card')">
-          <img src="page-30.jpg" alt="Business Card">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Business Card</span>
-          <p>Print-ready business card concept</p>
-        </div>
-      </article>
-    
-      <article class="card" data-type="menu">
-        <button class="work-btn" onclick="openLightbox('page-31.jpg','Food &amp; Menu Design')">
-          <img src="page-31.jpg" alt="Food &amp; Menu Design">
-          <span class="view">View project ↗</span>
-        </button>
-        <div class="card-copy">
-          <span class="eyebrow">Food &amp; Menu Design</span>
-          <p>Restaurant menu and promotional design</p>
-        </div>
-      </article>
-    </div>
+
+
+  <div class="grid" id="portfolioGrid"></div>
+
 </section>
+
 
 <section id="about" class="about">
-  <div><div class="kicker">About me</div><h2>Design with purpose, not just decoration.</h2></div>
+
   <div>
-    <p>I'm Jonty, a graphic design fresher building practical experience through branding, packaging, digital creatives and print design. I enjoy turning simple ideas into visuals that are clear, memorable and useful.</p>
-    <div class="skills">
-      <span class="skill">Graphic Design</span><span class="skill">Branding</span><span class="skill">Packaging</span><span class="skill">Social Media</span><span class="skill">Print Design</span><span class="skill">Canva</span><span class="skill">Adobe Illustrator</span>
-    </div>
+    <div class="kicker">About me</div>
+
+    <h2>
+      Design with purpose,
+      not just decoration.
+    </h2>
   </div>
+
+  <div>
+
+    <p>
+      I'm Jonty, a graphic design fresher building practical experience
+      through branding, packaging, digital creatives and print design.
+      I enjoy turning simple ideas into visuals that are clear,
+      memorable and useful.
+    </p>
+
+    <div class="skills">
+      <span class="skill">Graphic Design</span>
+      <span class="skill">Branding</span>
+      <span class="skill">Packaging</span>
+      <span class="skill">Social Media</span>
+      <span class="skill">Print Design</span>
+      <span class="skill">Canva</span>
+      <span class="skill">Adobe Illustrator</span>
+    </div>
+
+  </div>
+
 </section>
+
 
 <section id="contact">
+
   <div class="contact">
+
     <div class="kicker">Let's connect</div>
-    <h2>Have a project<br>in mind?</h2>
-    <p>I'm open to graphic design opportunities, internships and freelance projects. Feel free to reach out by email, WhatsApp, Instagram or LinkedIn.</p>
-    <a class="cta" href="mailto:jontypatrick8@gmail.com">Email me ↗</a>
-    <a class="cta" href="https://wa.me/917559327682" target="_blank" rel="noopener">WhatsApp ↗</a>
+
+    <h2>
+      Have a project<br>
+      in mind?
+    </h2>
+
+    <p>
+      I'm open to graphic design opportunities, internships and
+      freelance projects. Feel free to reach out by email,
+      WhatsApp, Instagram or LinkedIn.
+    </p>
+
+    <a class="cta" href="mailto:jontypatrick8@gmail.com">
+      Email me ↗
+    </a>
+
+    <a class="cta"
+       href="https://wa.me/917559327682"
+       target="_blank"
+       rel="noopener">
+      WhatsApp ↗
+    </a>
+
     <div class="socials">
-      <a href="https://instagram.com/_jonty_patrick" target="_blank" rel="noopener">Instagram · @_jonty_patrick</a>
-      <a href="https://www.linkedin.com/in/jonty-mishra%F0%9F%8E%A8-46b156239" target="_blank" rel="noopener">LinkedIn · Jonty Mishra</a>
-      <span>Call · 7559327682 / 9209323159</span>
+
+      <a href="https://instagram.com/_jonty_patrick"
+         target="_blank"
+         rel="noopener">
+        Instagram · @_jonty_patrick
+      </a>
+
+      <a href="https://www.linkedin.com/in/jonty-mishra%F0%9F%8E%A8-46b156239"
+         target="_blank"
+         rel="noopener">
+        LinkedIn · Jonty Mishra
+      </a>
+
+      <span>
+        Call · 7559327682 / 9209323159
+      </span>
+
     </div>
+
   </div>
+
 </section>
 
-<footer><span>© 2026 Jonty Patrick</span><span>Graphic Design Portfolio</span></footer>
+
+<footer>
+  <span>© 2026 Jonty Patrick</span>
+  <span>Graphic Design Portfolio</span>
+</footer>
+
 </div>
 
-<div id="lightbox" onclick="if(event.target===this)closeLightbox()">
-  <button class="close" onclick="closeLightbox()">×</button><img id="lightboxImg" alt="">
+
+<div id="lightbox"
+     onclick="if(event.target===this)closeLightbox()">
+
+  <button class="close"
+          onclick="closeLightbox()">
+    ×
+  </button>
+
+  <img id="lightboxImg" alt="">
+
 </div>
+
+
 <script>
-function openLightbox(src,title){document.getElementById('lightboxImg').src=src;document.getElementById('lightboxImg').alt=title;document.getElementById('lightbox').classList.add('open')}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('open')}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
-const filters=document.querySelectorAll('.filter'), cards=document.querySelectorAll('.card');
-filters.forEach(btn=>btn.addEventListener('click',()=>{
-  filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  const f=btn.dataset.filter;
-  cards.forEach(c=>{
-    let type=c.dataset.type;
-    let show=f==='all'||type===f||(f==='print'&&['brochure','banner','invitation','stationery','card','menu'].includes(type));
-    c.style.display=show?'block':'none';
+
+const grid = document.getElementById("portfolioGrid");
+
+const titles = [
+  "Portfolio Project 01",
+  "Logo Design",
+  "Portfolio Project 03",
+  "Portfolio Project 04",
+  "Packaging Design",
+  "Packaging Design",
+  "Packaging Design",
+  "Packaging Design",
+  "Packaging Design",
+  "Portfolio Project 10",
+  "Social Media",
+  "Portfolio Project 12",
+  "Portfolio Project 13",
+  "Portfolio Project 14",
+  "Portfolio Project 15",
+  "Portfolio Project 16",
+  "Brochure Design",
+  "Portfolio Project 18",
+  "Portfolio Project 19",
+  "Banner Design",
+  "Portfolio Project 21",
+  "Portfolio Project 22",
+  "Wedding Invitation",
+  "Portfolio Project 24",
+  "Portfolio Project 25",
+  "Portfolio Project 26",
+  "Stationery Design",
+  "Portfolio Project 28",
+  "Portfolio Project 29",
+  "Business Card",
+  "Food & Menu Design"
+];
+
+const types = [
+  "print",
+  "logo",
+  "print",
+  "print",
+  "packaging",
+  "packaging",
+  "packaging",
+  "packaging",
+  "packaging",
+  "print",
+  "social",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print",
+  "print"
+];
+
+for(let i=1;i<=31;i++){
+
+  const number = String(i).padStart(2,"0");
+
+  const src = "/page-" + number + ".jpg";
+
+  const card = document.createElement("article");
+
+  card.className = "card";
+
+  card.dataset.type = types[i-1];
+
+  card.innerHTML = `
+    <button class="work-btn"
+      onclick="openLightbox('${src}','${titles[i-1]}')">
+
+      <img
+        src="${src}"
+        alt="${titles[i-1]}"
+        loading="lazy">
+
+      <span class="view">
+        View project ↗
+      </span>
+
+    </button>
+
+    <div class="card-copy">
+
+      <span class="eyebrow">
+        ${titles[i-1]}
+      </span>
+
+      <p>
+        Portfolio design project
+      </p>
+
+    </div>
+  `;
+
+  grid.appendChild(card);
+}
+
+
+function openLightbox(src,title){
+
+  document.getElementById("lightboxImg").src = src;
+
+  document.getElementById("lightboxImg").alt = title;
+
+  document.getElementById("lightbox").classList.add("open");
+}
+
+
+function closeLightbox(){
+
+  document.getElementById("lightbox").classList.remove("open");
+}
+
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key === "Escape"){
+    closeLightbox();
+  }
+
+});
+
+
+const filters = document.querySelectorAll(".filter");
+
+filters.forEach(function(btn){
+
+  btn.addEventListener("click",function(){
+
+    filters.forEach(function(b){
+      b.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    document.querySelectorAll(".card").forEach(function(card){
+
+      if(
+        filter === "all" ||
+        card.dataset.type === filter
+      ){
+        card.style.display = "block";
+      }
+      else{
+        card.style.display = "none";
+      }
+
+    });
+
   });
-}));
+
+});
+
 </script>
+
 </body>
 </html>
